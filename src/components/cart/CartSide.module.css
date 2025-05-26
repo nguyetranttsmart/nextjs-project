@@ -1,0 +1,76 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* mờ nền */
+  display: flex;
+  justify-content: flex-end; /* đẩy panel sang phải */
+  z-index: 1000;
+}
+
+.cart {
+  background: #fff;
+  width: 350px;
+  max-width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 15px;
+}
+
+.item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.totalPrice {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  text-align: right;
+  font-size: 1.1rem;
+  font-weight: bold;
+}

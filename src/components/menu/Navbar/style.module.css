@@ -1,0 +1,117 @@
+.navbar {
+  position: sticky;
+  top: 60px;
+  z-index: 1000;
+  height: 60px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.menuWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 12px 24px;
+  display: inline-block;  
+  transition: transform 0.2s ease-in-out;
+  font-size: 18px;
+}
+
+.menu li a:hover {
+  transform: scale(1.1); 
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+}
+
+.rightIcons {
+  display: flex;
+  align-items: center;
+  gap: 2rem; 
+}
+
+.iconLink {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;  
+  transition: transform 0.2s ease-in-out;
+
+}
+.iconLink:hover{
+  transform: scale(1.33);
+  
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: white;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menuWrapper {
+    justify-content: flex-start;
+  }
+
+  .rightIcons {
+    display: none; /* Ẩn icon trên mobile nếu muốn */
+  }
+}
