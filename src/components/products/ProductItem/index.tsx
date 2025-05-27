@@ -4,8 +4,6 @@ import { Product } from "@/app/products/type";
 import { addToCart } from "@/components/cart/cart";
 import styles from './ProductItem.module.css';
 import CartSide from '@/components/cart/cartSide';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // import CSS cho toast
 
 interface Props {
   product: Product;

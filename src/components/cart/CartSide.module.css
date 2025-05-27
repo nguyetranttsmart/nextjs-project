@@ -74,3 +74,43 @@
   font-size: 1.1rem;
   font-weight: bold;
 }
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 7px;
+}
+
+.quantityControls button {
+  padding: 4px 8px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.deleteBtn {
+  color: rgb(172, 30, 30);
+  margin-left: 8px;
+}
+.checkoutContainer {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.checkoutBtn {
+  background-color: #7c3e77;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutBtn:hover {
+  background-color: #b911ab;
+}
+
+

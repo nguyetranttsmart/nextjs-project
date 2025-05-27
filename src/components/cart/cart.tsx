@@ -18,7 +18,14 @@ export function getCart(): CartItem[] {
     return [];
   }
 }
-
+export function updateQuantity(id: string, quantity: number) {
+  const cart = getCart();
+  const item = cart.find((item) => item.id === id);
+  if (item) {
+    item.quantity = quantity > 0 ? quantity : 1; 
+    saveCart(cart);
+  }
+}
 export function saveCart(cart: CartItem[]) {
   Cookies.set(CART_KEY, JSON.stringify(cart), { expires: 7 });
 }
@@ -33,5 +40,10 @@ export function addToCart(product: CartItem) {
     cart.push({ ...product, quantity: 1 });
   }
 
+  saveCart(cart);
+}
+
+export function removeFromCart(id: string) {
+  const cart = getCart().filter(item => item.id !== id);
   saveCart(cart);
 }

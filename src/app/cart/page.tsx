@@ -1,54 +1,44 @@
 'use client';
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { getCart, updateQuantity, removeFromCart } from './cart';
-import { CartItem } from "./cart";
-import styles from "./CartSide.module.css";
-import { IoClose } from 'react-icons/io5';
-import { useRouter } from 'next/navigation';
+import { getCart, updateQuantity, removeFromCart } from "@/components/cart/cart";
+import { CartItem } from "@/components/cart/cart";
+import styles from "./CartPage.module.css";
 
 
-
-
-interface Props{
-    onClose: () => void;
-}
-export default function cartSide({onClose}: Props) {
+export default function page()  {
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
-    const totalPrice = cartItems.reduce(
-  (total, item) => total + item.price * item.quantity,
-  0
-);
-const router = useRouter();
-const handleQuantityChange = (id: string, delta: number) => {
-    const updatedItems = cartItems.map(item => {
-      if (item.id === id) {
-        const newQuantity = item.quantity + delta;
-        if (newQuantity >= 1) {
-          updateQuantity(id, newQuantity);
-          return { ...item, quantity: newQuantity };
-          
-        }
-      }
-      return item;
-    });
-     setCartItems(getCart())
-  };
-   const handleRemove = (id: string) => {
-    removeFromCart(id);
-    setCartItems(getCart());
-  };
-    useEffect(()=>{
+        const totalPrice = cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+    const handleQuantityChange = (id: string, delta: number) => {
+        cartItems.map(item => {
+          if (item.id === id) {
+            const newQuantity = item.quantity + delta;
+            if (newQuantity >= 1) {
+              updateQuantity(id, newQuantity);
+              return { ...item, quantity: newQuantity };
+              
+            }
+          }
+          return item;
+        });
+         setCartItems(getCart())
+      };
+       const handleRemove = (id: string) => {
+        removeFromCart(id);
         setCartItems(getCart());
-    },[])
+      };
+        useEffect(()=>{
+            setCartItems(getCart());
+        },[])
   return (
-    <div className={styles.overlay} onClick={onClose}>
+     <div className={styles.overlay}>
       <div className={styles.cart} onClick={(e) => e.stopPropagation()}>
         <div className={styles.header}>
           <h2>Your Cart</h2>
-          <button className={styles.closeBtn} onClick={onClose}>
-            <IoClose size={24} />
-          </button>
+        
         </div>
        <div className={styles.body}>
   {cartItems.length === 0 ? (
@@ -79,10 +69,7 @@ const handleQuantityChange = (id: string, delta: number) => {
             <div className={styles.checkoutContainer}>
         <button
           className={styles.checkoutBtn}
-          onClick={() => {
-            onClose(); 
-            router.push('/cart');  
-          }}
+          
   >
     Checkout
   </button>
@@ -94,3 +81,4 @@ const handleQuantityChange = (id: string, delta: number) => {
     </div>
   );
 }
+

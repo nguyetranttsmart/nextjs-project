@@ -78,6 +78,7 @@
   align-items: center;
   font-size: 1.5rem;  
   transition: transform 0.2s ease-in-out;
+  border: 0;
 
 }
 .iconLink:hover{
@@ -112,6 +113,6 @@
   }
 
   .rightIcons {
-    display: none; /* Ẩn icon trên mobile nếu muốn */
+    display: none; 
   }
 }
