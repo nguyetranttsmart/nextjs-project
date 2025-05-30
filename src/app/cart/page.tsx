@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { getCart, updateQuantity, removeFromCart } from "@/components/cart/cart";
-import { CartItem } from "@/components/cart/cart";
+import { getCart, updateQuantity, removeFromCart } from "@/components/cart/helper";
+import { CartItem } from "@/components/cart/helper";
 import styles from "./CartPage.module.css";
 
 

@@ -1,15 +1,17 @@
 .navbar {
-  position: sticky;
-  top: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: transparent;
   z-index: 1000;
-  height: 60px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  display: flex;
-  align-items: center;
-  margin-bottom: 60px;
 }
 
+.navbarScrolled {
+  background-color: #b6b5b5; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -69,6 +71,7 @@
   display: flex;
   align-items: center;
   gap: 2rem; 
+   color: inherit;
 }
 
 .iconLink {
@@ -79,6 +82,7 @@
   font-size: 1.5rem;  
   transition: transform 0.2s ease-in-out;
   border: 0;
+  background:none;
 
 }
 .iconLink:hover{
@@ -86,7 +90,6 @@
   
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .menu {
     display: none;

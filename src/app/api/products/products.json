@@ -47,7 +47,36 @@
     "price": 10.99,
     "compareAtPrice": 20.99,
     "imageUrl": "/images/product1.jpg"
+},
+{
+    "title": "product8",
+    "description": "This is sample product",
+    "price": 10.99,
+    "compareAtPrice": 20.99,
+    "imageUrl": "/images/product1.jpg"
+},
+{
+    "title": "product9",
+    "description": "This is sample product",
+    "price": 10.99,
+    "compareAtPrice": 20.99,
+    "imageUrl": "/images/product1.jpg"
+},
+{
+    "title": "product10",
+    "description": "This is sample product",
+    "price": 10.99,
+    "compareAtPrice": 20.99,
+    "imageUrl": "/images/product1.jpg"
+},
+{
+    "title": "product11",
+    "description": "This is sample product",
+    "price": 10.99,
+    "compareAtPrice": 20.99,
+    "imageUrl": "/images/product1.jpg"
 }
+
 
 
 ]
