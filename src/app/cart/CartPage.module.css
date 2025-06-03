@@ -1,0 +1,132 @@
+.overlay {
+  padding: 2rem;
+  padding-top: 100px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cart {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.item div:first-of-type {
+  flex-grow: 1;
+}
+
+.item p {
+  margin: 0.25rem 0;
+  color: #333;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantityControls button {
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quantityControls button:hover {
+  background-color: #d0d0d0;
+}
+.deleteBtn {
+  background-color: transparent;
+  color: #cc0000;
+  border: none;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.totalPrice {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #444;
+}
+
+.checkoutContainer {
+  text-align: right;
+  margin-top: 1.5rem;
+}
+
+.checkoutBtn {
+  background-color: #888688;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutBtn:hover {
+  background-color: #000000;
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .checkoutContainer,
+  .totalPrice {
+    text-align: left;
+  }
+}
